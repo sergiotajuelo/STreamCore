@@ -1,6 +1,5 @@
 package es.sergiotajuelo.streamscore.accountservice.infrastructure.persistence.repository;
 
-import es.sergiotajuelo.streamscore.accountservice.domain.model.Account;
 import es.sergiotajuelo.streamscore.accountservice.infrastructure.persistence.entity.AccountEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

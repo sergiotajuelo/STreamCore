@@ -34,14 +34,6 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public List<User> findAllByIds(List<UUID> ids) {
-        List<UserEntity> userEntities = jpaUserRepository.findAllById(ids);
-        return userEntities.stream()
-                .map(userMapper::toUser)
-                .collect(Collectors.toList());
-    }
-
-    @Override
     public boolean existsByEmail(String email) {
         return jpaUserRepository.existsByEmail(email);
     }

@@ -2,7 +2,6 @@ package es.sergiotajuelo.streamscore.accountservice.application.services;
 
 import es.sergiotajuelo.streamscore.accountservice.application.dto.users.UserResponse;
 import es.sergiotajuelo.streamscore.accountservice.application.mappers.UserApplicationMapper;
-import es.sergiotajuelo.streamscore.accountservice.application.services.IGetUserByIdUseCase;
 import es.sergiotajuelo.streamscore.accountservice.domain.model.User;
 import es.sergiotajuelo.streamscore.accountservice.domain.repository.UserRepository;
 import lombok.RequiredArgsConstructor;

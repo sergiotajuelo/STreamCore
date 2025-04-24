@@ -3,7 +3,6 @@ package es.sergiotajuelo.streamscore.accountservice.application.services;
 import es.sergiotajuelo.streamscore.accountservice.application.dto.users.UpdateUserEmailRequest;
 import es.sergiotajuelo.streamscore.accountservice.application.dto.users.UserResponse;
 import es.sergiotajuelo.streamscore.accountservice.application.mappers.UserApplicationMapper;
-import es.sergiotajuelo.streamscore.accountservice.application.services.IUpdateUserEmailUseCase;
 import es.sergiotajuelo.streamscore.accountservice.domain.model.User;
 import es.sergiotajuelo.streamscore.accountservice.domain.repository.UserRepository;
 import es.sergiotajuelo.streamscore.accountservice.domain.services.UserService;

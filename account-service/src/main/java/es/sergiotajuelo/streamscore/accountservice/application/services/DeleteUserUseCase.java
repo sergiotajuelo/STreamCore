@@ -1,6 +1,5 @@
 package es.sergiotajuelo.streamscore.accountservice.application.services;
 
-import es.sergiotajuelo.streamscore.accountservice.application.services.IDeleteUserUseCase;
 import es.sergiotajuelo.streamscore.accountservice.domain.model.User;
 import es.sergiotajuelo.streamscore.accountservice.domain.repository.UserRepository;
 import es.sergiotajuelo.streamscore.accountservice.domain.services.UserService;
