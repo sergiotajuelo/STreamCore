@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  # --- DB (shared between all microservices) ---
+  streamcore-postgres:
+    image: postgres:13
+    container_name: streamcore-postgres
+    environment:
+      POSTGRES_DB: STreamCore
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/
+
+  # --- Microservices ---
+  account-service:
+    build: ./account-service
+    container_name: account-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://streamcore-postgres:5432/STreamCore
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: admin
+    ports:
+      - "8081:8081"
+    depends_on:
+      - streamcore-postgres
+
+volumes:
+  postgres_data:
